@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blink {
+  animation: blink-animation 1s steps(1, end) infinite;
+}
+
+@keyframes blink-animation {
+  50% {
+    opacity: 0; /* Cursor will be invisible 50% of the time */
+  }
+}
+
+
+
+
+body {
+  margin: 0; /* Remove default margin */
+}
+
+.dots {
+  position: fixed; /* Keep the dots in a fixed position */
+  top: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  display: flex; /* Align dots in a row */
+  flex-direction: column; /* Vertical alignment */
+  gap: 10px; /* Space between dots */
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; /* Make dots round */
+  background-color: gray; /* Default color */
+  transition: background-color 0.3s; /* Smooth color transition */
+}
+
+.dot.active {
+  background-color: white; /* Color when active */
+}
+
+.section {
+  height: 100vh; /* Each section takes the full viewport height */
+  display: flex; /* Flexbox for centering content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  transition: transform 0.5s ease; /* Smooth transition for transform */
+}
