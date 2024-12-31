@@ -30,13 +30,13 @@ const ContactSection = () => {
     <div className="bg-[#333333] text-black min-h-screen flex flex-col justify-center items-center p-8"> {/* Updated background color */}
       <div className="w-full max-w-4xl rounded-lg shadow-lg overflow-hidden">
         <div className=" text-white p-8 flex flex-col justify-center">
-          <h2 className="text-3xl font-bold mb-4 text-center">Contact Me</h2>
-          <p className="mb-4 text-center">Feel free to reach out using the form below:</p>
+          <h2 className="text-3xl font-bold mb-4 font-mono text-center">Contact Me</h2>
+          <p className="mb-4 font-mono text-center">Do you have a question, a proposal, or just wanted to say hi? Go ahead</p>
         </div>
         <form onSubmit={onSubmit} className="p-6 space-y-4">
-          <div className="flex flex-col md:flex-row md:space-x-4 mb-4"> 
+          <div className="flex flex-col md:flex-row md:space-x-4 mb-4">
             <div className="flex flex-col w-full md:w-1/2">
-              <label className="text-gray-700" htmlFor="name">Your Name</label>
+              <label className="text-[#F5F5F5]" htmlFor="name">Your Name</label>
               <input
                 type="text"
                 name="name"
@@ -46,7 +46,7 @@ const ContactSection = () => {
               />
             </div>
             <div className="flex flex-col w-full md:w-1/2">
-              <label className="text-gray-700" htmlFor="email">Your Email</label>
+              <label className="text-[#F5F5F5]" htmlFor="email">Your Email</label>
               <input
                 type="email"
                 name="email"
@@ -57,7 +57,7 @@ const ContactSection = () => {
             </div>
           </div>
           <div className="flex flex-col mb-4">
-            <label className="text-gray-700" htmlFor="message">Your Message</label>
+            <label className="text-[#F5F5F5]" htmlFor="message">Your Message</label>
             <textarea
               name="message"
               rows="6"
@@ -66,12 +66,14 @@ const ContactSection = () => {
               placeholder="Type your message here"
             ></textarea>
           </div>
-          <button
-            type="submit"
-            className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition"
-          >
-            Send Message
-          </button>
+          <div className="flex justify-center"> {/* Center the button horizontally */}
+            <button
+              type="submit"
+              className="w-52 bg-green-600 text-white py-2 rounded hover:bg-green-700 transition"
+            >
+              Send Message
+            </button>
+          </div>
           {result && (
             <p className="mt-4 text-center text-lg font-semibold text-green-700">
               {result}
