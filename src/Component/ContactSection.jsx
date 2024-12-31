@@ -27,7 +27,7 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="bg-[#333333] text-black min-h-screen flex flex-col justify-center items-center p-8"> {/* Updated background color */}
+    <div id="contact" className="bg-[#333333] text-black min-h-screen flex flex-col justify-center items-center p-8"> {/* Updated background color */}
       <div className="w-full max-w-4xl rounded-lg shadow-lg overflow-hidden">
         <div className=" text-white p-8 flex flex-col justify-center">
           <h2 className="text-3xl font-bold mb-4 font-mono text-center">Contact Me</h2>
